@@ -64,7 +64,38 @@ router.post("/forgot", async (req, res) => {
     await transporter.sendMail({
       to: user.email,
       subject: "Password Reset",
-      html: `<a href="${link}">Click here to reset password</a>`
+      html: `<div style="font-family: Arial, sans-serif; background-color: #f4f6f8; padding: 40px; text-align: center;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <div style="background: linear-gradient(90deg, #4f46e5, #3b82f6); padding: 20px;">
+        <h1 style="color: #ffffff; margin: 0; font-size: 22px;">Password Reset Request</h1>
+      </div>
+
+      <div style="padding: 30px; text-align: left; color: #333333;">
+        <p style="font-size: 16px; margin-bottom: 20px;">Hello ${user.name || "User"},</p>
+        <p style="font-size: 15px; line-height: 1.6;">
+          We received a request to reset your password. Click the button below to reset it. 
+          This link will expire in <b>1 hour</b>.
+        </p>
+
+        <div style="text-align: center; margin: 30px 0;">
+          <a href="${link}" 
+            style="background-color: #4f46e5; color: white; text-decoration: none; padding: 14px 28px; border-radius: 8px; display: inline-block; font-weight: bold; font-size: 15px;">
+            Reset Password
+          </a>
+        </div>
+
+        <p style="font-size: 14px; color: #555;">
+          If you didn’t request a password reset, you can safely ignore this email.
+        </p>
+      </div>
+
+      <div style="background-color: #f1f5f9; padding: 15px; text-align: center; font-size: 12px; color: #777;">
+        © ${new Date().getFullYear()} [Your App Name]. All rights reserved.<br/>
+        <a href="https://www.yourwebsite.com" style="color: #4f46e5; text-decoration: none;">Visit Website</a>
+      </div>
+    </div>
+  </div>
+`
     });
 
     res.json({ msg: "Reset link sent to email" });
