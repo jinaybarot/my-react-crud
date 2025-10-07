@@ -238,10 +238,9 @@ export default function CRUD() {
             disabled={currentPage === 1}
             onClick={() => handlePageChange(currentPage - 1)}
             className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 shadow-sm border
-              ${
-                currentPage === 1
-                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border-gray-300"
+              ${currentPage === 1
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border-gray-300"
               }`}
           >
             ← Prev
@@ -254,10 +253,9 @@ export default function CRUD() {
                 key={index + 1}
                 onClick={() => handlePageChange(index + 1)}
                 className={`w-9 h-9 flex items-center justify-center text-sm font-medium rounded-full transition-all duration-200 border shadow-sm
-                  ${
-                    currentPage === index + 1
-                      ? "bg-blue-600 text-white border-blue-600 shadow-md scale-105"
-                      : "bg-white text-gray-700 border-gray-300 hover:bg-blue-50 hover:text-blue-600"
+                  ${currentPage === index + 1
+                    ? "bg-blue-600 text-white border-blue-600 shadow-md scale-105"
+                    : "bg-white text-gray-700 border-gray-300 hover:bg-blue-50 hover:text-blue-600"
                   }`}
               >
                 {index + 1}
@@ -270,10 +268,9 @@ export default function CRUD() {
             disabled={currentPage === totalPages}
             onClick={() => handlePageChange(currentPage + 1)}
             className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 shadow-sm border
-              ${
-                currentPage === totalPages
-                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border-gray-300"
+              ${currentPage === totalPages
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border-gray-300"
               }`}
           >
             Next →

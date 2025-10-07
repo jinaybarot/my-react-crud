@@ -7,7 +7,6 @@ const router = express.Router();
 // Create Form Data
 router.post("/create", authMiddleware, async (req, res) => {
   try {
-    console.log(req.body);
     const { title, description, category, technologies } = req.body;
 
     const newForm = new FormData({
