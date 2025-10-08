@@ -157,22 +157,22 @@ export default function CRUD() {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider border-l border-r border-gray-200">
                 #
               </th>
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider border-l border-r border-gray-200">
                 Title
               </th>
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider border-l border-r border-gray-200">
                 Description
               </th>
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider border-l border-r border-gray-200">
                 Category
               </th>
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider border-l border-r border-gray-200">
                 Technologies
               </th>
-              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider border-l border-r border-gray-200">
                 Actions
               </th>
             </tr>
@@ -184,24 +184,24 @@ export default function CRUD() {
                   key={item._id || index}
                   className="hover:bg-gray-50 transition"
                 >
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm text-gray-700 border-l border-r border-gray-200">
                     {(currentPage - 1) * formsPerPage + index + 1}
                   </td>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900 border-l border-r border-gray-200">
                     {item.title || "-"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm text-gray-700 border-l border-r border-gray-200">
                     {item.description || "-"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm text-gray-700 border-l border-r border-gray-200">
                     {item.category || "-"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm text-gray-700 border-l border-r border-gray-200">
                     {item.technologies && item.technologies.length > 0
                       ? item.technologies.join(", ")
                       : "-"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700 space-x-2">
+                  <td className="px-6 py-4 text-sm text-gray-700 space-x-2 border-l border-r border-gray-200">
                     <button
                       onClick={() => handleEdit(item)}
                       className="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition"
@@ -220,8 +220,8 @@ export default function CRUD() {
             ) : (
               <tr>
                 <td
-                  colSpan="4"
-                  className="px-6 py-10 text-center text-gray-400"
+                  colSpan="6"
+                  className="px-6 py-10 text-center text-gray-400 border-l border-r border-gray-200"
                 >
                   No records found.
                 </td>
