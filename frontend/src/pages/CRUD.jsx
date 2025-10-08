@@ -14,7 +14,7 @@ export default function CRUD() {
   // 🔥 Added for search & pagination
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const formsPerPage = 5; // 🔥 change this value if you want more/less rows per page
+  const formsPerPage = 10; // 🔥 change this value if you want more/less rows per page
 
   const fetchForms = async () => {
     try {
