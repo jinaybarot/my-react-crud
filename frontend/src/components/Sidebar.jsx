@@ -53,6 +53,23 @@ const SettingIcon = () => (
   </svg>
 );
 
+const LocationIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 22s8-4 8-10-3.582-8-8-8-8 3.582-8 8 8 10 8 10z"
+    />
+  </svg>
+);
+
 // export default function Sidebar({ isOpen, onClose, activeItem, onItemClick }) {
 //   const menuItems = [
 //     { icon: HomeIcon, label: "Dashboard", key: "dashboard" },
@@ -111,6 +128,7 @@ export default function Sidebar({
     { icon: HomeIcon, label: "Dashboard", key: "dashboard" },
     { icon: BarChartIcon, label: "CRUD", key: "crud" },
     { icon: SettingIcon, label: "Setting", key: "setting" },
+    { icon: LocationIcon, label: "Map", key: "map" },
   ];
 
   return (

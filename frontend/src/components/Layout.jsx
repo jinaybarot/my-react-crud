@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import Dashboard from "../pages/Dashboard";
 import CRUD from "../pages/CRUD";
 import Setting from "../pages/Setting";
+import MapPage from "../pages/maps";
 
 export default function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -62,6 +63,8 @@ export default function Layout() {
         return <CRUD />;
       case "setting":
         return <Setting />;
+      case "map":
+        return <MapPage />;
       default:
         return <Dashboard />;
     }
